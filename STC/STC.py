@@ -27,7 +27,8 @@ def index() -> rx.Component:
         section_1(
             text.SECTION_TITLE_1,
             text.SECTION_TITLE_2,
-            text.SECTION_TITLE_3 ,
+            text.SECTION_TITLE_3,
+            st.position_1,
             ), 
         rx.vstack(
         great_grid(),
@@ -38,7 +39,8 @@ def index() -> rx.Component:
         ),
         section_1(text.SECTION_TITLE_4,
                   text.SECTION_TITLE_5,
-                  text.SECTION_TITLE_6),   
+                  text.SECTION_TITLE_6,
+                  st.position_2),   
         rx.vstack(
         section_2(text.SECTION_2_TEXT_5,
                   text.SECTION_2_TEXT_6,

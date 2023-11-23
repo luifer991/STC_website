@@ -15,6 +15,11 @@ blanco ="#ffffff"
 Bevan = "Bevan sans serif"
 libre = "Libre Baskerville sans serif"
 
+# posicion del escudo
+
+position_1 = "-100px 100px"
+position_2 = "1250px 100px"
+
 
 
 class Size (Enum):
@@ -102,4 +107,18 @@ text_secondary = dict(
     pt = Size.medium.value,
     color = blanco
 )
+
+section_1_style = dict(
+    width = "100%",
+    height="50vh",
+    justify_content="center",
+    align_items="center",
+    background_color = azul,
+    margin_top = "0px !important",
+    display = "flex",
+    background_image = "url(/shieldblack.png)",
+    background_size="400px auto",
+    background_repeat="no-repeat"
+)
+
 
