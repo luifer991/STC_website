@@ -11,8 +11,8 @@ from STC.Components.section2 import section_2
 import STC.styles.texts as text
 from STC.Components.form import form
 
-class State(rx.State):
-    pass
+"""class State(rx.State):
+    pass"""
 
 async def api_test(item_id: int): 
     return {"my_result": item_id}
