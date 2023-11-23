@@ -3,7 +3,7 @@ import STC.styles.styles as st
 from STC.styles.styles import Size as Size
 from STC.views.linksnavbar import link_button
 
-def navbar():
+def navbar()-> rx.Component:
     return rx.box(
         rx.hstack(
             rx.link(

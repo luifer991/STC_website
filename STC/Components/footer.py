@@ -3,6 +3,7 @@ import datetime
 import STC.styles.styles as st
 from STC.styles.styles import Size as Size
 
+@rx.memo
 def footer() -> rx.Component:
     return rx.hstack(
         rx.image(

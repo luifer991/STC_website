@@ -68,18 +68,18 @@ header_style = dict (
 )
 
 button_style = dict(
-    position = "relative; top: 30px",
+    position = "relative; top: 40px",
     padding = Size.high.value,
     font_family = Bevan,
     font_size = "md",
     color = blanco,
     border_color = azul,
     _hover = {
-        "padding_x": Size.big.value,
+        "padding_x": Size.xl.value,
         "color": negro,
         "border_color": blanco,
         "color_scheme": "black_alpha",
-        "font_size":"lg",
+        "font_size":"md",
         "bg": dorado_claro,
     },
     margin_top = "50px !important"

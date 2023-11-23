@@ -5,7 +5,6 @@ from STC.styles.styles import Size as Size
 
 
 
-
 def header() -> rx.Component:
     return rx.vstack(
             rx.heading(
