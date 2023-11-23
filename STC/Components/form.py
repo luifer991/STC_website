@@ -6,28 +6,32 @@ class User(rx.Model, table=True):
     username: str
     usercountry: str
     email: str
+    check: bool
 
 class AddUserForm(rx.State):
     username: User | None = None
     usercountry: User | None = None
     email: User | None = None
+    check: User | None = None
 
     def add_user(self, form_data: dict[str, str]):
         with rx.session() as session:
-            session.add(self.username,
-                        self.usercountry,
-                        self.email)
+            session.add(self.User)
             session.commit()
-            session.refresh(self.username,
-                            self.usercountry,
-                            self.email)
+            session.refresh(self.User)
 
 
 def form() -> rx.Component:
     return rx.hstack(
         rx.image(
-            src="/shield.png"
+            src="/legionatriopeleando.jpeg",
+            alt="Legionario en combate",
+            margin_y = Size.xl.value,
+            width = "60%",
+            height = "60%",
+
         ),
+        rx.spacer(),
         rx.spacer(),
         rx.vstack(
             rx.form(
@@ -53,4 +57,5 @@ def form() -> rx.Component:
                 on_submit = AddUserForm.add_user,
             ),
         ),
+        margin_top = Size.big.value,
     )

@@ -11,6 +11,7 @@ from STC.Components.section2 import section_2
 import STC.styles.texts as text
 from STC.Components.form import form
 
+
 """class State(rx.State):
     pass"""
 
