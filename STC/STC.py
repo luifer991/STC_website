@@ -9,11 +9,12 @@ from STC.views.grid import great_grid
 from STC.views.sections import section_1
 from STC.Components.section2 import section_2
 import STC.styles.texts as text
+from STC.Components.form import form
 
 class State(rx.State):
     pass
 
-async def api_test(item_id: int):
+async def api_test(item_id: int): 
     return {"my_result": item_id}
 
 def index() -> rx.Component:
@@ -46,7 +47,8 @@ def index() -> rx.Component:
                   text.SECTION_2_TEXT_6,
                   text.SECTION_2_img_2, 
                   text.SECTION_2_TEXT_7),
-                  margin_bottom = st.Size.big.value
+                  form(),
+                  margin_bottom = st.Size.big.value,
         ),
         
 

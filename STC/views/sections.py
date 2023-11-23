@@ -18,7 +18,7 @@ def section_1(title_1:str,title_2:str,body:str, position:str) -> rx.Component:
             color = st.blanco,
             font_size = Size.high.value,
         ),
-    st.section_1_style,
+    style = st.section_1_style,
     background_position = position,
     )
 
