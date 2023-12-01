@@ -1,7 +1,7 @@
 import reflex as rx
 import STC.styles.styles as st
 from STC.styles.styles import Size as Size
-
+import STC.styles.contants as const
 
 
 
@@ -24,7 +24,8 @@ def header() -> rx.Component:
                     style = st.button_style,
 
                 ),
-                href= "#",
+                href= const.LANDING_PAGE_URL,
+                is_external=True
                 ),
             style = st.header_style
     )

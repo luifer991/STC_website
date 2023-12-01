@@ -1,11 +1,12 @@
 import reflex as rx
 import STC.styles.styles as st
 from STC.styles.styles import Size as Size
+import STC.styles.contants as const
 
 
 def section_2(title: str, body: str, url: str, button: str) -> rx.Component:
-    return rx.grid(
-        rx.grid_item(
+    return rx.responsive_grid(
+        rx.box(
                 rx.image(src=url,
                      width = "100%",
                      height = "100%"
@@ -14,7 +15,7 @@ def section_2(title: str, body: str, url: str, button: str) -> rx.Component:
             col_span=3,
             justify_content="center",
         ),
-        rx.grid_item(
+        rx.box(
             rx.vstack(
                 rx.heading(title),
                 rx.text(body, style = st.text_secondary),
@@ -31,8 +32,9 @@ def section_2(title: str, body: str, url: str, button: str) -> rx.Component:
                         "padding":Size.high.value
                     }
                     ),
-                    href="#",
+                    href=const.WHATSAPP_URL,
                     position = "relative; left: 100px; top: 100px;",
+                    is_external=True
                 ),
             ),
             
@@ -42,10 +44,7 @@ def section_2(title: str, body: str, url: str, button: str) -> rx.Component:
             justify_content="center",
             display = "flex"
         ),
-        template_rows="repeat(2, 1fr)",
-        template_columns="repeat(6, 1fr)",
-        h="60vh",
-        width="100%",
+        columns=[1,1,2],
         gap=2,
         max_width= "1024px"
     )

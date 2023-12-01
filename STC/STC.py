@@ -9,12 +9,12 @@ from STC.views.grid import great_grid
 from STC.views.sections import section_1
 from STC.Components.section2 import section_2
 import STC.styles.texts as text
-from STC.Components.form import form
+from STC.Components.avatar import avatar
 
 
-"""class State(rx.State):
-    pass"""
-
+class State(rx.State):
+    pass
+    
 async def api_test(item_id: int): 
     return {"my_result": item_id}
 
@@ -44,12 +44,7 @@ def index() -> rx.Component:
                   text.SECTION_TITLE_6,
                   st.position_2),   
         rx.vstack(
-        section_2(text.SECTION_2_TEXT_5,
-                  text.SECTION_2_TEXT_6,
-                  text.SECTION_2_img_2, 
-                  text.SECTION_2_TEXT_7),
-                  form(),
-                  margin_bottom = st.Size.big.value,
+            avatar()
         ),
         
 
@@ -59,7 +54,10 @@ def index() -> rx.Component:
     
 
 # Add state and page to the app.
-app = rx.App(style=st.font_style)
+app = rx.App(
+    stylesheets=st.STYLESHEETS,
+    style=st.font_style
+    )
 app.api.add_api_route("/items/{item_id}", api_test)
 app.add_page(index,
             title="STC | Sistema Táctico de Combate",

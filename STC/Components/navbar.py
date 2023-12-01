@@ -19,10 +19,10 @@ def navbar()-> rx.Component:
         rx.spacer(),
         rx.menu(
             rx.hstack(
-                link_button("inicio","#"),
-                link_button("Quiénes Somos","#"),
+                link_button("inicio","/"),
+                link_button("Quiénes Somos","https://luifer991.wixsite.com/stcsistema/qui%C3%A9nes-somos"),
                 link_button("Nuestros Servicios","#"),
-                link_button("Blog Táctico","#"),
+                link_button("Blog Táctico","https://luifer991.wixsite.com/stcsistema/blog"),
                 pr = Size.extra.value,
             ),
         ),

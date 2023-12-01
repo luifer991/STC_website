@@ -21,16 +21,22 @@ position_1 = "-100px 100px"
 position_2 = "1250px 100px"
 
 
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Bevan&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap"
+]
+
+
 
 class Size (Enum):
     zero = "0px !important"
-    small = "0.5em",
-    medium = "0.8em",
-    default = "1em",
-    high = "1.5em",
-    big = "2em",
-    xl = "3em",
-    extra = "4em",
+    small = "0.5em"
+    medium = "0.8em"
+    default = "1em"
+    high = "1.5em"
+    big = "2em"
+    xl = "3em"
+    extra = "4em"
 
 font_style = {
     rx.Heading:{

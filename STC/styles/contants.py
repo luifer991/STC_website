@@ -1,0 +1,5 @@
+FACEBOOK_URL = "https://www.facebook.com/s.t.c.sistematacticodecombate"
+INSTAGRAM_URL = "https://www.instagram.com/stc_sistema_99/"
+TIKTOK_URL = "https://www.tiktok.com/@guerreros_stc?_t=8hp4WjHmXVF&_r=1"
+LANDING_PAGE_URL = "https://mailchi.mp/1d0945b2559a/defensa-personal-al-da"
+WHATSAPP_URL = "https://wa.me/573186922713"

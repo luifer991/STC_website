@@ -9,8 +9,8 @@ def great_grid() -> rx.Component:
             padding_y = Size.small.value,
             font_size = Size.xl.value
         ),
-        rx.grid(
-    rx.grid_item(
+        rx.responsive_grid(
+    rx.box(
         rx.image(
             src="/defensa.jpeg",
             width = "100%",
@@ -18,7 +18,7 @@ def great_grid() -> rx.Component:
         ),
         col_span=2,
     ),
-    rx.grid_item(
+    rx.box(
         rx.vstack(
             rx.heading("Prevención"),
             rx.text( """En el corazón de STC yace un principio irrefutable: 
@@ -30,7 +30,7 @@ def great_grid() -> rx.Component:
         ),
         col_span=2, #bg=st.gris
         ),
-    rx.grid_item(
+    rx.box(
         rx.image(
             src="/entrenar.jpeg",
             width = "100%",
@@ -38,7 +38,7 @@ def great_grid() -> rx.Component:
         ),
         col_span=2,
     ),
-    rx.grid_item(
+    rx.box(
         rx.vstack(
             rx.heading("Disuación"),
             rx.text("""En el núcleo de STC, la disuasión se convierte en nuestro aliado principal. 
@@ -49,7 +49,7 @@ def great_grid() -> rx.Component:
         ),
         col_span=2, #bg=st.gris
         ),
-    rx.grid_item(
+    rx.box(
         rx.image(
             src="/patadaenlacara.jpeg",
             width = "100%",
@@ -57,7 +57,7 @@ def great_grid() -> rx.Component:
         ),
         col_span=2,
     ),
-    rx.grid_item(
+    rx.box(
         rx.vstack(
             rx.heading("Acción"),
             rx.text("""En el mundo de STC, la acción es el último recurso, pero no por eso menos vital. 
@@ -71,11 +71,8 @@ def great_grid() -> rx.Component:
         ),
         col_span=2, #bg=st.gris
         ),
-    template_rows="repeat(2, 1fr)",
-    template_columns="repeat(6, 1fr)",
-    h="100vh",
-    width="100%",
-    gap=2,
-    max_width = "1024px"
+        max_width= "1024px",
+        columns=[1,1,1,3,3],
+    
 ),
 )
