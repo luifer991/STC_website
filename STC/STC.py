@@ -58,7 +58,6 @@ app = rx.App(
     stylesheets=st.STYLESHEETS,
     style=st.font_style
     )
-app.api.add_api_route("/items/{item_id}", api_test)
 app.add_page(index,
             title="STC | Sistema Táctico de Combate",
             description="Enseñamos defensa personal",)
